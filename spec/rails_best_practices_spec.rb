@@ -13,8 +13,7 @@ module Danger
       describe '#lint' do
         subject { rails_best_practices.lint }
 
-        before { changed_files }
-        before { lint_errors }
+        before { stubbings }
         before { subject }
 
         let(:changed_files) do
@@ -23,21 +22,45 @@ module Danger
           expect(git).to receive(:added_files).and_return(added_files)
         end
 
-        let(:modified_files) { [double('Modified Files')] }
-        let(:added_files)    { [double('Added Files')] }
+        context 'with changed files' do
+          let(:modified_files) { [double('Modified Files')] }
+          let(:added_files)    { [double('Added Files')] }
 
-        let(:lint_errors) do
-          linter = ::RailsBestPractices::Analyzer
-          args   = { message:     double('Message'),
-                     filename:    double('Filename'),
-                     line_number: double('Line Number') }
-          errors = [double('Lint Errors', args)]
-          expect_any_instance_of(linter).to receive(:errors)
-            .and_return(errors)
+          context 'with lint errors' do
+            let(:stubbings) { changed_files && lint_errors }
+
+            let(:lint_errors) do
+              linter = ::RailsBestPractices::Analyzer
+              args   = { message:     double('Message'),
+                         filename:    double('Filename'),
+                         line_number: double('Line Number') }
+              errors = [double('Lint Errors', args)]
+              expect_any_instance_of(linter).to receive(:errors)
+                .and_return(errors)
+            end
+
+            it 'returns warning messages' do
+              expect(dangerfile.status_report[:warnings]).to be_present
+            end
+          end
+
+          context 'with no lint errors' do
+            let(:stubbings) { changed_files }
+
+            it 'returns no warning messages' do
+              expect(dangerfile.status_report[:warnings]).to be_empty
+            end
+          end
         end
 
-        it 'returns warning messages' do
-          expect(dangerfile.status_report[:warnings]).to be_present
+        context 'with no changed files' do
+          let(:stubbings)      { changed_files }
+          let(:modified_files) { [] }
+          let(:added_files)    { [] }
+
+          it 'returns no warning messages' do
+            expect(dangerfile.status_report[:warnings]).to be_empty
+          end
         end
       end
     end

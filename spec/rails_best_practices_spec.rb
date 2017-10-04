@@ -6,34 +6,39 @@ module Danger
       expect(Danger::DangerRailsBestPractices.new(nil)).to be_a Danger::Plugin
     end
 
-    #
-    # You should test your custom attributes and methods here
-    #
     describe 'with Dangerfile' do
-      before do
-        @dangerfile = testing_dangerfile
-        @my_plugin = @dangerfile.rails_best_practices
-      end
+      let(:dangerfile)           { testing_dangerfile }
+      let(:rails_best_practices) { dangerfile.rails_best_practices }
 
-      # Some examples for writing tests
-      # You should replace these with your own.
+      describe '#lint' do
+        subject { rails_best_practices.lint }
 
-      it 'Warns on a monday' do
-        monday_date = Date.parse('2016-07-11')
-        allow(Date).to receive(:today).and_return monday_date
+        before { changed_files }
+        before { lint_errors }
+        before { subject }
 
-        @my_plugin.warn_on_mondays
+        let(:changed_files) do
+          git = rails_best_practices.git
+          expect(git).to receive(:modified_files).and_return(modified_files)
+          expect(git).to receive(:added_files).and_return(added_files)
+        end
 
-        expect(@dangerfile.status_report[:warnings]).to eq(['Trying to merge code on a Monday'])
-      end
+        let(:modified_files) { [double('Modified Files')] }
+        let(:added_files)    { [double('Added Files')] }
 
-      it 'Does nothing on a tuesday' do
-        monday_date = Date.parse('2016-07-12')
-        allow(Date).to receive(:today).and_return monday_date
+        let(:lint_errors) do
+          linter = ::RailsBestPractices::Analyzer
+          args   = { message:     double('Message'),
+                     filename:    double('Filename'),
+                     line_number: double('Line Number') }
+          errors = [double('Lint Errors', args)]
+          expect_any_instance_of(linter).to receive(:errors)
+            .and_return(errors)
+        end
 
-        @my_plugin.warn_on_mondays
-
-        expect(@dangerfile.status_report[:warnings]).to eq([])
+        it 'returns warning messages' do
+          expect(dangerfile.status_report[:warnings]).to be_present
+        end
       end
     end
   end

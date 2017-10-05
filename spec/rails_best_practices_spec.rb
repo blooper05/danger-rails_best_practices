@@ -33,13 +33,16 @@ module Danger
 
             let(:lint_errors) do
               linter = ::RailsBestPractices::Analyzer
-              args   = { message:     double('Message'),
-                         filename:    double('Filename'),
-                         line_number: double('Line Number') }
-              errors = [double('Lint Errors', args)]
+              errors = [double('Lint Errors', message:     error_message,
+                                              filename:    filename,
+                                              line_number: line_number)]
               expect_any_instance_of(linter).to receive(:errors)
                 .and_return(errors)
             end
+
+            let(:error_message) { 'error message' }
+            let(:filename)      { "#{Dir.pwd}/path/to/file" }
+            let(:line_number)   { '123' }
 
             it 'returns warning reports' do
               expect(warning_reports).to be_present

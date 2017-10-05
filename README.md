@@ -7,7 +7,7 @@
 [![Gem Version](https://img.shields.io/gem/v/danger-rails_best_practices.svg)](https://rubygems.org/gems/danger-rails_best_practices)
 [![License](https://img.shields.io/github/license/blooper05/danger-rails_best_practices.svg)](https://github.com/blooper05/danger-rails_best_practices/blob/master/LICENSE)
 
-A description of danger-rails_best_practices.
+A [danger](https://rubygems.org/gems/danger) plugin for [rails_best_practices](https://rubygems.org/gems/rails_best_practices).
 
 ## Installation
 

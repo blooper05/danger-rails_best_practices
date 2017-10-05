@@ -44,8 +44,10 @@ module Danger
     end
 
     def warn_each_line(lint_errors)
+      current_dir = "#{Dir.pwd}/"
       lint_errors.map do |error|
-        warn(error.message, file: error.filename, line: error.line_number)
+        file = error.filename.sub(current_dir, '')
+        warn(error.message, file: file, line: error.line_number)
       end
     end
   end

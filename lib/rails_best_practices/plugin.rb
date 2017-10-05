@@ -47,7 +47,8 @@ module Danger
       current_dir = "#{Dir.pwd}/"
       lint_errors.map do |error|
         file = error.filename.sub(current_dir, '')
-        warn(error.message, file: file, line: error.line_number)
+        line = error.line_number.to_i
+        warn(error.message, file: file, line: line)
       end
     end
   end

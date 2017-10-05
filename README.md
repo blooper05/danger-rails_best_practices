@@ -15,8 +15,20 @@ A description of danger-rails_best_practices.
 
 ## Usage
 
-    Methods and attributes from this plugin are available in
-    your `Dangerfile` under the `rails_best_practices` namespace.
+### rails_best_practices
+
+Lints Ruby files via [rails_best_practices](https://rubygems.org/gems/rails_best_practices).
+Results are sent as inline comments.
+
+<blockquote>Running rails_best_practices
+  <pre>
+# Runs rails_best_practices on modified and added files in the PR
+rails_best_practices.lint</pre>
+</blockquote>
+
+#### Methods
+
+`lint` - Runs Ruby files through rails_best_practices.
 
 ## Development
 

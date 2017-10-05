@@ -1,27 +1,19 @@
 require 'rails_best_practices'
 
 module Danger
-  # This is your plugin class. Any attributes or methods you expose here will
-  # be available from within your Dangerfile.
+  # Lints Ruby files via [rails_best_practices](https://rubygems.org/gems/rails_best_practices).
+  # Results are sent as inline comments.
   #
-  # To be published on the Danger plugins site, you will need to have
-  # the public interface documented. Danger uses [YARD](http://yardoc.org/)
-  # for generating documentation from your plugin source, and you can verify
-  # by running `danger plugins lint` or `bundle exec rake spec`.
+  # @example Running rails_best_practices
   #
-  # You should replace these comments with a public description of your library.
-  #
-  # @example Ensure people are well warned about merging on Mondays
-  #
-  #          my_plugin.warn_on_mondays
+  #          # Runs rails_best_practices on modified and added files in the PR
+  #          rails_best_practices.lint
   #
   # @see  blooper05/danger-rails_best_practices
-  # @tags monday, weekends, time, rattata
-  #
+  # @tags ruby, rails, rails_best_practices, lint
   class DangerRailsBestPractices < Plugin
-    # A method that you can call from your Dangerfile
-    # @return   [Array<String>]
-    #
+    # Runs Ruby files through rails_best_practices.
+    # @return [Array<RailsBestPractices::Core::Error, nil>]
     def lint
       files_to_lint = fetch_files_to_lint
       lint_errors   = run_linter(files_to_lint)

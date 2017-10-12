@@ -26,8 +26,8 @@ module Danger
         let(:violation_reports) { dangerfile.violation_report[:warnings] }
 
         context 'with changed files' do
-          let(:modified_files) { [double('Modified Files')] }
-          let(:added_files)    { [double('Added Files')] }
+          let(:modified_files) { ['path/to/file'] }
+          let(:added_files)    { [] }
 
           context 'with lint errors' do
             let(:stubbings) { changed_files && lint_errors }

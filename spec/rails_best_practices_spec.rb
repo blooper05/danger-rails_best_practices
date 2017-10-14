@@ -26,8 +26,8 @@ module Danger
         let(:violation_reports) { dangerfile.violation_report[:warnings] }
 
         context 'with changed files' do
-          let(:modified_files) { [double('Modified Files')] }
-          let(:added_files)    { [double('Added Files')] }
+          let(:modified_files) { ['path/to/file'] }
+          let(:added_files)    { [] }
 
           context 'with lint errors' do
             let(:stubbings) { changed_files && lint_errors }
@@ -59,6 +59,31 @@ module Danger
             it 'returns no warning reports' do
               expect(status_reports).to be_empty
               expect(violation_reports).to be_empty
+            end
+          end
+        end
+
+        describe 'arguments to Analyzer.new' do
+          let(:modified_files) { [] }
+          let(:added_files)    { [] }
+
+          let(:stubbings) { changed_files }
+
+          let(:analyzer) do
+            analyzer = double('Analyzer')
+            analyzer.stub(:analyze)
+            analyzer.stub(:errors).and_return([])
+            analyzer
+          end
+
+          describe 'regexp from filenames' do
+            let(:modified_files) { ['a.rb'] }
+            let(:added_files) { ['b.rb'] }
+
+            it 'escapes correctly' do
+              allow(::RailsBestPractices::Analyzer).to receive(:new)
+                .with('.', 'silent' => true, 'only' => [/a\.rb/, /b\.rb/])
+                .and_return(analyzer)
             end
           end
         end

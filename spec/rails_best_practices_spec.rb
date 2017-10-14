@@ -63,6 +63,17 @@ module Danger
           end
         end
 
+        context 'with no changed files' do
+          let(:stubbings)      { changed_files }
+          let(:modified_files) { [] }
+          let(:added_files)    { [] }
+
+          it 'returns no warning reports' do
+            expect(status_reports).to be_empty
+            expect(violation_reports).to be_empty
+          end
+        end
+
         describe 'arguments to Analyzer.new' do
           let(:modified_files) { [] }
           let(:added_files)    { [] }
@@ -85,17 +96,6 @@ module Danger
                 .with('.', 'silent' => true, 'only' => [/a\.rb/, /b\.rb/])
                 .and_return(analyzer)
             end
-          end
-        end
-
-        context 'with no changed files' do
-          let(:stubbings)      { changed_files }
-          let(:modified_files) { [] }
-          let(:added_files)    { [] }
-
-          it 'returns no warning reports' do
-            expect(status_reports).to be_empty
-            expect(violation_reports).to be_empty
           end
         end
       end

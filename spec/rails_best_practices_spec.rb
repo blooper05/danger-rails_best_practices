@@ -74,28 +74,21 @@ module Danger
           end
         end
 
-        describe 'arguments to Analyzer.new' do
-          let(:modified_files) { [] }
-          let(:added_files)    { [] }
+        describe 'arguments passed to RailsBestPractices::Analyzer.new' do
+          let(:stubbings) { changed_files && analyzer }
 
-          let(:stubbings) { changed_files }
+          let(:modified_files) { %w(spec/fixtures/modified_file.rb) }
+          let(:added_files)    { %w(\*?{}.) }
 
           let(:analyzer) do
-            analyzer = double('Analyzer')
-            analyzer.stub(:analyze)
-            analyzer.stub(:errors).and_return([])
-            analyzer
+            expect(::RailsBestPractices::Analyzer).to receive(:new)
+              .with('.', 'silent' => true,
+                         'only' => [%r{spec/fixtures/modified_file\.rb},
+                                    /\\\*\?\{\}\./])
+              .and_call_original
           end
 
-          describe 'regexp from filenames' do
-            let(:modified_files) { ['a.rb'] }
-            let(:added_files) { ['b.rb'] }
-
-            it 'escapes correctly' do
-              allow(::RailsBestPractices::Analyzer).to receive(:new)
-                .with('.', 'silent' => true, 'only' => [/a\.rb/, /b\.rb/])
-                .and_return(analyzer)
-            end
+          it 'escapes filenames correctly' do
           end
         end
       end

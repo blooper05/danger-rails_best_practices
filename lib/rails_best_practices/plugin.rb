@@ -32,7 +32,7 @@ module Danger
 
     def fetch_files_to_lint
       files = git.modified_files + git.added_files
-      files.map { |file| Regexp.compile(Regexp.escape(file)) }
+      files.map { |file| Regexp.compile(Regexp.escape(file)) }.to_a
     end
 
     def warn_each_line(lint_errors)

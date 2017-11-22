@@ -1,7 +1,7 @@
 # danger-rails_best_practices
 
 [![Build Status](https://img.shields.io/travis/blooper05/danger-rails_best_practices.svg)](https://travis-ci.org/blooper05/danger-rails_best_practices)
-[![Code Climate](https://img.shields.io/codeclimate/github/blooper05/danger-rails_best_practices.svg)](https://codeclimate.com/github/blooper05/danger-rails_best_practices)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/blooper05/danger-rails_best_practices.svg)](https://codeclimate.com/github/blooper05/danger-rails_best_practices)
 [![Coverage](https://img.shields.io/codeclimate/coverage/github/blooper05/danger-rails_best_practices.svg)](https://codeclimate.com/github/blooper05/danger-rails_best_practices)
 [![Dependency Status](https://img.shields.io/gemnasium/blooper05/danger-rails_best_practices.svg)](https://gemnasium.com/blooper05/danger-rails_best_practices)
 [![Gem Version](https://img.shields.io/gem/v/danger-rails_best_practices.svg)](https://rubygems.org/gems/danger-rails_best_practices)

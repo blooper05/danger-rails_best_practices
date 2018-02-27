@@ -1,11 +1,11 @@
 # danger-rails_best_practices
 
-[![Build Status](https://img.shields.io/travis/blooper05/danger-rails_best_practices.svg)](https://travis-ci.org/blooper05/danger-rails_best_practices)
-[![Code Climate](https://img.shields.io/codeclimate/maintainability/blooper05/danger-rails_best_practices.svg)](https://codeclimate.com/github/blooper05/danger-rails_best_practices)
-[![Coverage](https://img.shields.io/codeclimate/coverage/github/blooper05/danger-rails_best_practices.svg)](https://codeclimate.com/github/blooper05/danger-rails_best_practices)
-[![Dependency Status](https://img.shields.io/gemnasium/blooper05/danger-rails_best_practices.svg)](https://gemnasium.com/blooper05/danger-rails_best_practices)
-[![Gem Version](https://img.shields.io/gem/v/danger-rails_best_practices.svg)](https://rubygems.org/gems/danger-rails_best_practices)
-[![License](https://img.shields.io/github/license/blooper05/danger-rails_best_practices.svg)](https://github.com/blooper05/danger-rails_best_practices/blob/master/LICENSE)
+[![Build Status](https://img.shields.io/travis/blooper05/danger-rails_best_practices.svg?longCache=true&style=flat)](https://travis-ci.org/blooper05/danger-rails_best_practices)
+[![Dependency Status](https://img.shields.io/gemnasium/blooper05/danger-rails_best_practices.svg?longCache=true&style=flat)](https://gemnasium.com/blooper05/danger-rails_best_practices)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/blooper05/danger-rails_best_practices.svg?longCache=true&style=flat)](https://codeclimate.com/github/blooper05/danger-rails_best_practices)
+[![Coverage](https://img.shields.io/codeclimate/c/blooper05/danger-rails_best_practices.svg?longCache=true&style=flat)](https://codeclimate.com/github/blooper05/danger-rails_best_practices)
+[![Gem Version](https://img.shields.io/gem/v/danger-rails_best_practices.svg?longCache=true&style=flat)](https://rubygems.org/gems/danger-rails_best_practices)
+[![License](https://img.shields.io/github/license/blooper05/danger-rails_best_practices.svg?longCache=true&style=flat)](https://github.com/blooper05/danger-rails_best_practices/blob/master/LICENSE)
 
 A [Danger](https://rubygems.org/gems/danger) plugin for [rails_best_practices](https://rubygems.org/gems/rails_best_practices).
 

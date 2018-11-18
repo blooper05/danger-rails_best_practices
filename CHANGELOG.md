@@ -1,5 +1,30 @@
 # Change Log
 
+## [Unreleased](https://github.com/blooper05/danger-rails_best_practices/tree/HEAD)
+
+[Full Changelog](https://github.com/blooper05/danger-rails_best_practices/compare/v0.1.2...HEAD)
+
+**Implemented enhancements:**
+
+- danger-rails\_best\_practices should not specify rails\_best\_practices version [\#2](https://github.com/blooper05/danger-rails_best_practices/issues/2)
+
+**Fixed bugs:**
+
+- Code Climate's badge is not working [\#9](https://github.com/blooper05/danger-rails_best_practices/issues/9)
+
+**Merged pull requests:**
+
+- 💚 CI against latest Ruby versions [\#19](https://github.com/blooper05/danger-rails_best_practices/pull/19) ([blooper05](https://github.com/blooper05))
+- 📝 Change badges from Shields.io to Badgen [\#18](https://github.com/blooper05/danger-rails_best_practices/pull/18) ([blooper05](https://github.com/blooper05))
+- 💚 CI against latest Ruby versions [\#17](https://github.com/blooper05/danger-rails_best_practices/pull/17) ([blooper05](https://github.com/blooper05))
+- Update listen requirement to = 3.1.5 [\#16](https://github.com/blooper05/danger-rails_best_practices/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update rake requirement to ~\> 12.3 [\#15](https://github.com/blooper05/danger-rails_best_practices/pull/15) ([dependabot[bot]](https://github.com/apps/dependabot))
+- 🚿 Remove specification\_version of rubocop and yard [\#14](https://github.com/blooper05/danger-rails_best_practices/pull/14) ([blooper05](https://github.com/blooper05))
+- 📝 Update badges on README [\#13](https://github.com/blooper05/danger-rails_best_practices/pull/13) ([blooper05](https://github.com/blooper05))
+- 💚 CI against latest Ruby versions [\#12](https://github.com/blooper05/danger-rails_best_practices/pull/12) ([blooper05](https://github.com/blooper05))
+- 👕 Fix offenses of RuboCop [\#11](https://github.com/blooper05/danger-rails_best_practices/pull/11) ([blooper05](https://github.com/blooper05))
+- 📝 Update Code Climate's badges [\#10](https://github.com/blooper05/danger-rails_best_practices/pull/10) ([blooper05](https://github.com/blooper05))
+
 ## [v0.1.2](https://github.com/blooper05/danger-rails_best_practices/tree/v0.1.2) (2017-10-23)
 [Full Changelog](https://github.com/blooper05/danger-rails_best_practices/compare/v0.1.1...v0.1.2)
 
@@ -9,8 +34,8 @@
 
 **Merged pull requests:**
 
-- :bug: Fix ArgumentError on RailsBestPractices::Analyzer\#analyze method [\#8](https://github.com/blooper05/danger-rails_best_practices/pull/8) ([blooper05](https://github.com/blooper05))
-- :+1: Support older rails\_best\_practices versions [\#6](https://github.com/blooper05/danger-rails_best_practices/pull/6) ([blooper05](https://github.com/blooper05))
+- 🐛 Fix ArgumentError on RailsBestPractices::Analyzer\#analyze method [\#8](https://github.com/blooper05/danger-rails_best_practices/pull/8) ([blooper05](https://github.com/blooper05))
+- 👍 Support older rails\_best\_practices versions [\#6](https://github.com/blooper05/danger-rails_best_practices/pull/6) ([blooper05](https://github.com/blooper05))
 
 ## [v0.1.1](https://github.com/blooper05/danger-rails_best_practices/tree/v0.1.1) (2017-10-21)
 [Full Changelog](https://github.com/blooper05/danger-rails_best_practices/compare/v0.1.0...v0.1.1)
@@ -21,8 +46,8 @@
 
 **Merged pull requests:**
 
-- :bug: Fix Neverfail test [\#5](https://github.com/blooper05/danger-rails_best_practices/pull/5) ([blooper05](https://github.com/blooper05))
-- :bug: Fix TargetRubyVersion setting of .rubocop.yml [\#4](https://github.com/blooper05/danger-rails_best_practices/pull/4) ([blooper05](https://github.com/blooper05))
+- 🐛 Fix Neverfail test [\#5](https://github.com/blooper05/danger-rails_best_practices/pull/5) ([blooper05](https://github.com/blooper05))
+- 🐛 Fix TargetRubyVersion setting of .rubocop.yml [\#4](https://github.com/blooper05/danger-rails_best_practices/pull/4) ([blooper05](https://github.com/blooper05))
 -  Escape filename regexp [\#1](https://github.com/blooper05/danger-rails_best_practices/pull/1) ([edvakf](https://github.com/edvakf))
 
 ## [v0.1.0](https://github.com/blooper05/danger-rails_best_practices/tree/v0.1.0) (2017-10-05)

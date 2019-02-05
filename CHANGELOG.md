@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/blooper05/danger-rails_best_practices/tree/HEAD)
-
-[Full Changelog](https://github.com/blooper05/danger-rails_best_practices/compare/v0.1.2...HEAD)
+## [v0.1.3](https://github.com/blooper05/danger-rails_best_practices/tree/v0.1.3) (2019-02-05)
+[Full Changelog](https://github.com/blooper05/danger-rails_best_practices/compare/v0.1.2...v0.1.3)
 
 **Implemented enhancements:**
 
@@ -14,6 +13,9 @@
 
 **Merged pull requests:**
 
+- 💚 Manage the settings of Dependabot as a file [\#23](https://github.com/blooper05/danger-rails_best_practices/pull/23) ([blooper05](https://github.com/blooper05))
+- 💚 CI against latest Ruby versions [\#22](https://github.com/blooper05/danger-rails_best_practices/pull/22) ([blooper05](https://github.com/blooper05))
+- ⬆️ Update bundler requirement to \>= 1.3, \< 3 [\#21](https://github.com/blooper05/danger-rails_best_practices/pull/21) ([blooper05](https://github.com/blooper05))
 - 💚 CI against latest Ruby versions [\#19](https://github.com/blooper05/danger-rails_best_practices/pull/19) ([blooper05](https://github.com/blooper05))
 - 📝 Change badges from Shields.io to Badgen [\#18](https://github.com/blooper05/danger-rails_best_practices/pull/18) ([blooper05](https://github.com/blooper05))
 - 💚 CI against latest Ruby versions [\#17](https://github.com/blooper05/danger-rails_best_practices/pull/17) ([blooper05](https://github.com/blooper05))

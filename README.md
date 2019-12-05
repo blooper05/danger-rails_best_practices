@@ -1,7 +1,7 @@
 # danger-rails_best_practices
 
 [![Build Status](https://badgen.net/travis/blooper05/danger-rails_best_practices?icon=travis)](https://travis-ci.com/blooper05/danger-rails_best_practices)
-[![Dependency Status](https://api.dependabot.com/badges/status?host=github&repo=blooper05/danger-rails_best_practices)](https://dependabot.com)
+[![Dependency Status](https://badgen.net/dependabot/blooper05/danger-rails_best_practices?icon=dependabot)](https://dependabot.com)
 [![Maintainability](https://badgen.net/codeclimate/maintainability/blooper05/danger-rails_best_practices?icon=codeclimate)](https://codeclimate.com/github/blooper05/danger-rails_best_practices)
 [![Coverage](https://badgen.net/codeclimate/coverage/blooper05/danger-rails_best_practices?icon=codeclimate)](https://codeclimate.com/github/blooper05/danger-rails_best_practices)
 [![Version](https://badgen.net/rubygems/v/danger-rails_best_practices?icon=ruby)](https://rubygems.org/gems/danger-rails_best_practices)
